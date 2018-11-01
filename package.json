@@ -1,0 +1,48 @@
+{
+  "name": "vitamino-next",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "proxy": {
+    "/auth/google": {
+      "target": "http://localhost:3000"
+    },
+    "/api/*": {
+      "target": "http://localhost:3000"
+    }
+  },
+  "scripts": {
+    "dev": "NODE_ENV=development node server/server.js",
+    "build": "next build",
+    "start": "NODE_ENV=production node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nikroomancer/vitamino-next.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nikroomancer/vitamino-next/issues"
+  },
+  "homepage": "https://github.com/nikroomancer/vitamino-next#readme",
+  "dependencies": {
+    "@zeit/next-css": "^1.0.1",
+    "@zeit/next-less": "^1.0.1",
+    "axios": "^0.18.0",
+    "cookie-session": "^2.0.0-beta.3",
+    "css-loader": "^1.0.0",
+    "css-modules": "^0.3.0",
+    "express": "^4.16.4",
+    "isomorphic-unfetch": "^3.0.0",
+    "less": "^3.8.1",
+    "less-loader": "^4.1.0",
+    "mongoose": "^5.3.4",
+    "next": "^7.0.2",
+    "passport": "^0.4.0",
+    "passport-google-oauth20": "^1.0.0",
+    "react": "^16.6.0",
+    "react-dom": "^16.6.0"
+  }
+}
