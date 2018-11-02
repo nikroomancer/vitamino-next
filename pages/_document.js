@@ -3,13 +3,17 @@
 
 // ./pages/_document.js
 import Document, { Head, Main, NextScript } from 'next/document'
+import { ServerStyleSheet } from 'styled-components'
 import flush from 'styled-jsx/server'
 
 export default class MyDocument extends Document {
     static getInitialProps({ renderPage }) {
         const { html, head, errorHtml, chunks } = renderPage()
         const styles = flush()
-        return { html, head, errorHtml, chunks, styles }
+        const sheet = new ServerStyleSheet()
+        const page = renderPage(App => props => sheet.collectStyles(<App {...props} />))
+        const styleTags = sheet.getStyleElement()
+        return { html, head, errorHtml, chunks, styles, ...page, styleTags }
     }
 
     render() {
@@ -19,6 +23,7 @@ export default class MyDocument extends Document {
                 <style>{`html { height: 100%; } /* custom! */`}</style>
             </Head>
             <body>
+            <style>{`body { margin: 0; padding: 0; } /* custom! */`}</style>
             {this.props.customValue}
             <Main />
             <NextScript />
