@@ -20,11 +20,12 @@ export default class MyDocument extends Document {
         return (
             <html>
             <Head>
+                <link rel="icon" type="image/x-icon" href="/static/images/favicon.ico" />
                 <style>{`html { height: 100%; } /* custom! */`}</style>
+                {this.props.styleTags}
             </Head>
             <body>
             <style>{`body { margin: 0; padding: 0; } /* custom! */`}</style>
-            {this.props.customValue}
             <Main />
             <NextScript />
             </body>

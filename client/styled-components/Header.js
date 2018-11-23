@@ -1,10 +1,10 @@
 import styled from 'styled-components';
-import heroBackground from '../img/hero-background.jpg';
-import spinningLogo from '../img/spinning-logo.gif';
+//import heroBackground from '../../static/images/hero-background.jpeg';
+//import spinningLogo from '../../static/images/spinning-logo.gif';
 import { darken } from 'polished';
 
-export const Hero = styled.div`
-    background-image: url(${heroBackground});
+export const HeroBackground = styled.div`
+    background-image: url(${'../../static/images/hero-background.jpeg'});
     background-repeat: ${props => props.theme.Hero.backgroundRepeat};
     background-position: ${props => props.theme.Hero.backgroundPosition};
     background-size: ${props => props.theme.Hero.backgroundSize};
@@ -12,10 +12,27 @@ export const Hero = styled.div`
     height: ${props => props.theme.Hero.height};
     position: ${props => props.theme.Hero.position};
     color: white;
+    filter: blur(0.3px);
+    &:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      background-image: linear-gradient(to bottom right,rgba(0,0,0,0.31),rgba(255,255,255,0.41));
+      opacity: .6;
+      
+            }
+`;
+
+export const HeroContent = styled.div`
+  position:relative;
+  height: 100%;
 `;
 
 export const SpinningLogo = styled.div`
-    background-image: url(${spinningLogo});
+    background-image: url(${'../../static/images/spinning-logo.gif'});
     width: ${props => props.theme.SpinningLogo.width};
     height: ${props => props.theme.SpinningLogo.height}; 
     background-repeat: ${props => props.theme.SpinningLogo.backgroundRepeat};
@@ -52,4 +69,5 @@ export const TextPreview = styled.div`
     padding: 20px 7%;
     max-width: 700px;
     margin: 0 auto;
+    color: #b3b3b3;
 `;

@@ -1,11 +1,14 @@
 // pages/_app.js
 import React from "react";
-import {createStore, applyMiddleware} from "redux";
+import {createStore, combineReducers, applyMiddleware} from "redux";
+import { reducer as formReducer } from 'redux-form';
 import {Provider} from "react-redux";
 import App, {Container} from "next/app";
 import withRedux from "next-redux-wrapper";
 import { composeWithDevTools } from 'redux-devtools-extension';
 import ReduxThunk from 'redux-thunk';
+import {theme} from '../client/styled-components/themes/basic';
+import {ThemeProvider} from 'styled-components';
 
 const reducer = (state = {foo: ''}, action) => {
     switch (action.type) {
@@ -16,6 +19,15 @@ const reducer = (state = {foo: ''}, action) => {
     }
 };
 
+const rootReducer = combineReducers({
+  // ...your other reducers here
+  // you have to pass formReducer under 'form' key,
+  // for custom keys look up the docs for 'getFormState'
+  reducer,
+  form: formReducer
+})
+
+
 /**
  * @param {object} initialState
  * @param {boolean} options.isServer indicates whether it is a server side or client side
@@ -25,7 +37,7 @@ const reducer = (state = {foo: ''}, action) => {
  * @param {string} options.storeKey This key will be used to preserve store in global namespace for safe HMR
  */
 const makeStore = (initialState, options) => {
-    return createStore(reducer, initialState,
+    return createStore(rootReducer, initialState,
     composeWithDevTools(
         applyMiddleware(ReduxThunk)
         // other store enhancers if any
@@ -47,7 +59,9 @@ class MyApp extends App {
         return (
             <Container>
                 <Provider store={store}>
-                    <Component {...pageProps} />
+                    <ThemeProvider theme={theme}>
+                        <Component {...pageProps} />
+                    </ThemeProvider>
                 </Provider>
             </Container>
         );

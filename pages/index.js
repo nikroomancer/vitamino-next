@@ -10,16 +10,13 @@ const mapStateToProps = (state) =>{
 class Index extends Component {
 
     static async getInitialProps({ store, isServer, pathname, query }) {
-        // component will be able to read from store's state when rendered
+        //component will be able to read from store's state when rendered
         const res = await fetch('https://api.tvmaze.com/search/shows?q=batman')
         const data = await res.json();
         console.log(`Show data fetched. Count: ${data.length}`);
         store.dispatch({ type: "FOO", payload: data.length });
 
-        // return {
-        //     shows: data
-        // }
-        // return { custom: "custom" }; // you can pass some custom props to component from here
+        return { custom: "custom" }; // you can pass some custom props to component from here
     }
 
     componentDidUpdate(){

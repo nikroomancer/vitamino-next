@@ -20,23 +20,7 @@ const mapDispatchToProps = (dispatch) =>{
 
 class Header extends Component {
 
-    static getInitialProps({ store, isServer, pathname, query }) {
-        // component will be able to read from store's state when rendered
-        // const res = await fetch('https://api.tvmaze.com/search/shows?q=batman')
-        // const data = await res.json();
-        // console.log(`Show data fetchedededed. Count: ${data.length}`);
-        // store.dispatch({ type: "FOO", payload: 'blabla' });
-
-        // return {
-        //     shows: data
-        // }
-        // return { custom: "custom" }; // you can pass some custom props to component from here
-        console.log('get inital header props')
-    }
-
     componentDidMount(){
-        console.log(this.props)
-        console.log('component header mount')
         this.props.test()
     }
 

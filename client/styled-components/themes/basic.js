@@ -5,7 +5,7 @@ export const theme = {
         backgroundSize: 'cover',
         width: '100%',
         height: '250px',
-        position: 'relative',
+        position: 'absolute',
     },
     SpinningLogo: {
         width: '100%',

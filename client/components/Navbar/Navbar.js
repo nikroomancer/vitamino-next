@@ -1,9 +1,10 @@
 import Link from 'next/link'
 import css from "./Navbar.less";
-import {TABS} from '../../config/constants';
+import {USER_TABS} from '../../config/constants';
 import React, {Component} from "react";
 import {createStore} from "redux";
 import withRedux from "next-redux-wrapper";
+import {Nav, NavLink, NavLogo, NavItem} from '../../styled-components/UserNav';
 // create a simple reducer
 const reducer = (state = {foo: ''}, action) => {
     switch (action.type) {
@@ -23,18 +24,26 @@ const linkStyle = {
 };
 
 class Navbar extends Component {
+
     render(){
+
+      const NavBar = (props) => (
+          <Link href={`/post?title=${props.title}`}>
+            <a>{props.title}</a>
+          </Link>
+      )
+
         const {foo, custom} = this.props;
         return(
-            <div className={css.example}>
-                <div>{foo}</div>
-                <div>{custom}</div>
-                {TABS.map((tab,index) => {
-                    return <Link key={index} href={tab.route}>
-                        <a style={linkStyle}>{tab.name}</a>
-                    </Link>
-                })}
-            </div>
+          <Nav>
+            {USER_TABS.map((tab,index) => {
+              return <Link key={index} href={tab.route}>
+                <NavItem>
+                  <NavLink>{tab.name}</NavLink>
+                </NavItem>
+              </Link>
+            })}
+          </Nav>
         )
     }
 }
@@ -43,7 +52,7 @@ class Navbar extends Component {
 Navbar.getInitialProps = ({store, isServer, pathname, query}) => {
     // component will read from store's state when rendered
     store.dispatch({type: 'FOO', payload: 'foo'});
-    console.log('hej')
+    console.log('hejfrånnavbar')
     // pass some custom props to component from here
     return {custom: 'custom'};
 };

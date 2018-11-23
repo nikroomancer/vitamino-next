@@ -93,6 +93,72 @@ module.exports =
 /************************************************************************/
 /******/ ({
 
+/***/ "./client/styled-components/themes/basic.js":
+/*!**************************************************!*\
+  !*** ./client/styled-components/themes/basic.js ***!
+  \**************************************************/
+/*! exports provided: theme */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "theme", function() { return theme; });
+var theme = {
+  Hero: {
+    backgroundPosition: 'center',
+    backgroundRepeat: 'no-repeat',
+    backgroundSize: 'cover',
+    width: '100%',
+    height: '250px',
+    position: 'absolute'
+  },
+  SpinningLogo: {
+    width: '100%',
+    height: '100%',
+    backgroundPosition: 'bottom',
+    backgroundRepeat: 'no-repeat',
+    backgroundSize: 'contain'
+  },
+  Navigation: {
+    margin: '0 0 0 10px'
+  },
+  Nav: {
+    padding: '0.7rem',
+    borderRadius: '2px',
+    boxShadow: 'none',
+    background: 'transparent',
+    paddingTopOnScroll: '0.4rem',
+    paddingBottomOnScroll: '0.2rem',
+    backgroundOnScroll: '#5B527F',
+    boxShadowOnScroll: '0 2px 5px 0 rgba(0,0,0,.16), 0 2px 10px 0 rgba(0,0,0,.12)'
+  },
+  NavBrand: {
+    color: '#FCFBE3',
+    paddingTop: '0.3125rem',
+    paddingBottom: '0.3125rem',
+    marginRight: '1rem',
+    fontSize: '1.8rem'
+  },
+  NavContainer: {
+    paddingRight: '15px',
+    paddingLeft: '15px'
+  },
+  ContentContainer: {
+    boxShadow: '0 2px 5px 5px rgba(0,0,0,.16), 0 2px 10px 0 rgba(0,0,0,.12)' // backgroundColor: '#FBFAEF'
+
+  },
+  MainInnerContainer: {
+    padding: '3rem',
+    paddingRight: 'calc(0.7rem + 15px)',
+    paddingLeft: 'calc(0.7rem + 15px)',
+    alternateColor: '#f3f5f7'
+  },
+  linkColor: 'palevioletred',
+  background: 'white'
+};
+
+/***/ }),
+
 /***/ "./pages/_app.js":
 /*!***********************!*\
   !*** ./pages/_app.js ***!
@@ -108,16 +174,21 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var redux__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! redux */ "redux");
 /* harmony import */ var redux__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(redux__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-redux */ "react-redux");
-/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(react_redux__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var next_app__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! next/app */ "next/app");
-/* harmony import */ var next_app__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(next_app__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var next_redux_wrapper__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! next-redux-wrapper */ "next-redux-wrapper");
-/* harmony import */ var next_redux_wrapper__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(next_redux_wrapper__WEBPACK_IMPORTED_MODULE_5__);
-/* harmony import */ var redux_devtools_extension__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! redux-devtools-extension */ "redux-devtools-extension");
-/* harmony import */ var redux_devtools_extension__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(redux_devtools_extension__WEBPACK_IMPORTED_MODULE_6__);
-/* harmony import */ var redux_thunk__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! redux-thunk */ "redux-thunk");
-/* harmony import */ var redux_thunk__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(redux_thunk__WEBPACK_IMPORTED_MODULE_7__);
+/* harmony import */ var redux_form__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! redux-form */ "redux-form");
+/* harmony import */ var redux_form__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(redux_form__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react-redux */ "react-redux");
+/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(react_redux__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var next_app__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! next/app */ "next/app");
+/* harmony import */ var next_app__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(next_app__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var next_redux_wrapper__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! next-redux-wrapper */ "next-redux-wrapper");
+/* harmony import */ var next_redux_wrapper__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(next_redux_wrapper__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var redux_devtools_extension__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! redux-devtools-extension */ "redux-devtools-extension");
+/* harmony import */ var redux_devtools_extension__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(redux_devtools_extension__WEBPACK_IMPORTED_MODULE_7__);
+/* harmony import */ var redux_thunk__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! redux-thunk */ "redux-thunk");
+/* harmony import */ var redux_thunk__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(redux_thunk__WEBPACK_IMPORTED_MODULE_8__);
+/* harmony import */ var _client_styled_components_themes_basic__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../client/styled-components/themes/basic */ "./client/styled-components/themes/basic.js");
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! styled-components */ "styled-components");
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_10___default = /*#__PURE__*/__webpack_require__.n(styled_components__WEBPACK_IMPORTED_MODULE_10__);
 
 var _jsxFileName = "/Users/nimanikroo/Desktop/vitamino-next/pages/_app.js";
 
@@ -158,6 +229,9 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
 
 
+
+
+
 var reducer = function reducer() {
   var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {
     foo: ''
@@ -174,6 +248,14 @@ var reducer = function reducer() {
       return state;
   }
 };
+
+var rootReducer = Object(redux__WEBPACK_IMPORTED_MODULE_2__["combineReducers"])({
+  // ...your other reducers here
+  // you have to pass formReducer under 'form' key,
+  // for custom keys look up the docs for 'getFormState'
+  reducer: reducer,
+  form: redux_form__WEBPACK_IMPORTED_MODULE_3__["reducer"]
+});
 /**
  * @param {object} initialState
  * @param {boolean} options.isServer indicates whether it is a server side or client side
@@ -183,9 +265,8 @@ var reducer = function reducer() {
  * @param {string} options.storeKey This key will be used to preserve store in global namespace for safe HMR
  */
 
-
 var makeStore = function makeStore(initialState, options) {
-  return Object(redux__WEBPACK_IMPORTED_MODULE_2__["createStore"])(reducer, initialState, Object(redux_devtools_extension__WEBPACK_IMPORTED_MODULE_6__["composeWithDevTools"])(Object(redux__WEBPACK_IMPORTED_MODULE_2__["applyMiddleware"])(redux_thunk__WEBPACK_IMPORTED_MODULE_7___default.a) // other store enhancers if any
+  return Object(redux__WEBPACK_IMPORTED_MODULE_2__["createStore"])(rootReducer, initialState, Object(redux_devtools_extension__WEBPACK_IMPORTED_MODULE_7__["composeWithDevTools"])(Object(redux__WEBPACK_IMPORTED_MODULE_2__["applyMiddleware"])(redux_thunk__WEBPACK_IMPORTED_MODULE_8___default.a) // other store enhancers if any
   ));
 };
 
@@ -207,26 +288,33 @@ function (_App) {
           Component = _this$props.Component,
           pageProps = _this$props.pageProps,
           store = _this$props.store;
-      return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(next_app__WEBPACK_IMPORTED_MODULE_4__["Container"], {
+      return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(next_app__WEBPACK_IMPORTED_MODULE_5__["Container"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 48
+          lineNumber: 60
         },
         __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react_redux__WEBPACK_IMPORTED_MODULE_3__["Provider"], {
+      }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react_redux__WEBPACK_IMPORTED_MODULE_4__["Provider"], {
         store: store,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 49
+          lineNumber: 61
+        },
+        __self: this
+      }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(styled_components__WEBPACK_IMPORTED_MODULE_10__["ThemeProvider"], {
+        theme: _client_styled_components_themes_basic__WEBPACK_IMPORTED_MODULE_9__["theme"],
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 62
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(Component, _extends({}, pageProps, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 50
+          lineNumber: 63
         },
         __self: this
-      }))));
+      })))));
     }
   }], [{
     key: "getInitialProps",
@@ -278,9 +366,9 @@ function (_App) {
   }]);
 
   return MyApp;
-}(next_app__WEBPACK_IMPORTED_MODULE_4___default.a);
+}(next_app__WEBPACK_IMPORTED_MODULE_5___default.a);
 
-/* harmony default export */ __webpack_exports__["default"] = (next_redux_wrapper__WEBPACK_IMPORTED_MODULE_5___default()(makeStore)(MyApp));
+/* harmony default export */ __webpack_exports__["default"] = (next_redux_wrapper__WEBPACK_IMPORTED_MODULE_6___default()(makeStore)(MyApp));
 
 /***/ }),
 
@@ -373,6 +461,17 @@ module.exports = require("redux-devtools-extension");
 
 /***/ }),
 
+/***/ "redux-form":
+/*!*****************************!*\
+  !*** external "redux-form" ***!
+  \*****************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = require("redux-form");
+
+/***/ }),
+
 /***/ "redux-thunk":
 /*!******************************!*\
   !*** external "redux-thunk" ***!
@@ -381,6 +480,17 @@ module.exports = require("redux-devtools-extension");
 /***/ (function(module, exports) {
 
 module.exports = require("redux-thunk");
+
+/***/ }),
+
+/***/ "styled-components":
+/*!************************************!*\
+  !*** external "styled-components" ***!
+  \************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = require("styled-components");
 
 /***/ })
 

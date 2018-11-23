@@ -3,6 +3,7 @@ import media from './mediaTemplates';
 
 export const Row = styled.div`
   ${({height}) => height && `height: ${height}`};
+  ${({position}) => position && `position: ${position}`};
   &::after {
     content: '';
     clear: both;

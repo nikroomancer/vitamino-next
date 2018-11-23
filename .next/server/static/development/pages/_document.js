@@ -171,34 +171,43 @@ function (_Document) {
           lineNumber: 22
         },
         __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("style", {
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("link", {
+        rel: "icon",
+        type: "image/x-icon",
+        href: "/static/images/favicon.ico",
         __source: {
           fileName: _jsxFileName,
           lineNumber: 23
         },
         __self: this
-      }, "html { height: 100%; } /* custom! */")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("body", {
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("style", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 25
+          lineNumber: 24
+        },
+        __self: this
+      }, "html { height: 100%; } /* custom! */"), this.props.styleTags), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("body", {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 27
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("style", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 26
+          lineNumber: 28
         },
         __self: this
-      }, "body { margin: 0; padding: 0; } /* custom! */"), this.props.customValue, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(next_document__WEBPACK_IMPORTED_MODULE_1__["Main"], {
+      }, "body { margin: 0; padding: 0; } /* custom! */"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(next_document__WEBPACK_IMPORTED_MODULE_1__["Main"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 28
+          lineNumber: 29
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(next_document__WEBPACK_IMPORTED_MODULE_1__["NextScript"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 29
+          lineNumber: 30
         },
         __self: this
       })));
